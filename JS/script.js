@@ -34,7 +34,6 @@ function tablecolor() {
     else {
         document.querySelector('#dadosBanda').classList.remove('tableTextColor');
     }
-
 }
 
  function UpTxtOnMouseOver(){
