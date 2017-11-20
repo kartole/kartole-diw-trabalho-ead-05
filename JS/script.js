@@ -19,7 +19,6 @@ function changeBG() {
     if(tabela.classList.contains('newBG')){
         tabela.classList.remove('newBG');
         this.value = 'Background Amarelo';
-
     }
     else{
         tabela.classList.add('newBG');
@@ -29,8 +28,6 @@ function changeBG() {
 
 function tablecolor() {
    
-    
-
     if(this.checked) {
         document.querySelector('#dadosBanda').classList.add('tableTextColor');
     }
@@ -79,31 +76,26 @@ function reverseDate(){
     var cloneToReverse = dateToReverse.cloneNode(true);
     
     
-if(this.checked){
-    var nToReverse = document.querySelector('table').lastElementChild.childElementCount
-    
-    for(i = 0; i < nToReverse; i++){
-        var day = dateToReverse.children[i].lastElementChild.textContent.substring(0, 2);
-        var month = dateToReverse.children[i].lastElementChild.textContent.substring(3, 5);
-        var year = dateToReverse.children[i].lastElementChild.textContent.substring(6, 10);
-        dateToReverse.children[i].lastElementChild.innerHTML = '<td class="nascimento">'+month+'/'+day+'/'+year+'</td>';
-
-    }
-}
-else{
-    var nToClone = document.querySelector('table').lastElementChild.childElementCount;
-    for(k = 0; k < nToClone; k++){
-        var dayclone = dateToReverse.children[k].lastElementChild.textContent.substring(0, 2);
-        var monthclone = dateToReverse.children[k].lastElementChild.textContent.substring(3, 5);
-        var yearclone = dateToReverse.children[k].lastElementChild.textContent.substring(6, 10);
-        dateToReverse.children[k].lastElementChild.innerHTML = '<td class="nascimento">'+monthclone+'/'+dayclone+'/'+yearclone+'</td>';
+    if(this.checked){
+        var nToReverse = document.querySelector('table').lastElementChild.childElementCount
         
+        for(i = 0; i < nToReverse; i++){
+            var day = dateToReverse.children[i].lastElementChild.textContent.substring(0, 2);
+            var month = dateToReverse.children[i].lastElementChild.textContent.substring(3, 5);
+            var year = dateToReverse.children[i].lastElementChild.textContent.substring(6, 10);
+            dateToReverse.children[i].lastElementChild.innerHTML = '<td class="nascimento">'+month+'/'+day+'/'+year+'</td>';
+        }
     }
-  
-    
-}
-
-  
+    else{
+        var nToClone = document.querySelector('table').lastElementChild.childElementCount;
+        
+        for(k = 0; k < nToClone; k++){
+            var dayclone = dateToReverse.children[k].lastElementChild.textContent.substring(0, 2);
+            var monthclone = dateToReverse.children[k].lastElementChild.textContent.substring(3, 5);
+            var yearclone = dateToReverse.children[k].lastElementChild.textContent.substring(6, 10);
+            dateToReverse.children[k].lastElementChild.innerHTML = '<td class="nascimento">'+monthclone+'/'+dayclone+'/'+yearclone+'</td>';
+        }
+    }
 }
 
 
